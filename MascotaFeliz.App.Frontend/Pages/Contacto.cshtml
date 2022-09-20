@@ -1,0 +1,37 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <p>Tienes alguna peticion, sugerencia o reclamo. Llena el formulario y nos pondremos en contacto en el menor tiempo posible.</p>
+                <form action="Consultar" method="post">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value=""><br>
+                <label for="tipousuario">Tipo de Usuario:</label>
+                <select>
+                    <option>Dueño</option>
+                    <option>Veterinario</option>
+                    <option>Otro</option>
+
+                </select><br>
+                <label for="mensaje">Mensaje:</label>
+                <input type="text" id="mensaje" name="mensaje" value=""><br>
+
+                <input type="button" value="Enviar">
+
+            </form>    
+
+
+</body>
+</html>
+

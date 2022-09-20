@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Mascota Feliz</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
 </head>
 <body>
     <header>
@@ -19,20 +20,54 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Duenos/ListaDuenos">
+                            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/itmsnfur.json"
+					trigger="hover"
+					colors="outline:#121331,primary:#545454,secondary:#a66037,tertiary:#f9c9c0"
+					style="width:60px;height:60px">
+				</lord-icon>Dueños</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Duenos/ListaDuenos">Dueños</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/ListaMascotas">
+                            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/zagjqhhk.json"
+					trigger="hover"
+					colors="outline:#bcee66,primary:#b26836,secondary:#646e78,tertiary:#2ca58d"
+					style="width:60px;height:60px">
+				</lord-icon>Mascotas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/ListaMascotas">Mascotas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/ListaVeterinarios"><script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/eoabunbr.json"
+					trigger="hover"
+					colors="outline:#121331,primary:#4bb3fd,secondary:#b4b4b4"
+					style="width:60px;height:60px">
+				</lord-icon>Veterinarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/ListaVeterinarios">Veterinarios</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ListaVisitasPyP"><script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/etqbfrgp.json"
+					trigger="hover"
+					style="width:60px;height:60px">
+				</lord-icon>Visita PyP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>                                                                        
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ListaHistorias"><script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+				<lord-icon
+					src="https://cdn.lordicon.com/yrixyrst.json"
+					trigger="hover"
+					colors="outline:#121331,primary:#ee6d66,secondary:#3080e8"
+					style="width:60px;height:60px">
+				</lord-icon>Historia Clinica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Contacto</a>
+                        </li>                                                                                                                        
                     </ul>
                 </div>
             </div>
@@ -46,7 +81,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - MascotaFeliz.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022--Mintic-Universidad de Caldas- <a asp-area="" asp-page="/Contacto">Contacto</a>
         </div>
     </footer>
 
@@ -57,3 +92,68 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+<style>
+
+
+#menu ul{
+	list-style:none;
+}
+
+#menu #item{
+	float: right;
+}
+
+#menu #item a {
+	padding: 5px 15px;
+	display: block;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	font-family: 'Bungee';
+}
+
+header{
+	background-color: #6a10f3eb;
+	text-align: center;
+	padding: 25px;
+}
+
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: #01010a;
+	margin: 0px 5px;
+	padding: 1px 5px;
+	border-radius: 35px;
+	text-align: center;
+}
+nav a:hover {
+	background-color: rgb(64, 173, 227);
+	color: rgb(245, 244, 248);
+}
+
+.encabezado-img p{
+
+	font-family: cursive;
+	font-size: 40px;
+	color:rgb(244, 247, 248)
+
+
+}
+.encabezado-img h1{
+	font-size: 80px;
+	padding: 15px 0;
+	
+
+
+}
+
+</style>
+

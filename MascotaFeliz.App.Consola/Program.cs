@@ -8,11 +8,11 @@ namespace MascotaFeliz.App.Consola
     class Program
     {
 
-        /*private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());*/
+        private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
-        /*private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());*/
-        /*private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
-       private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());*/
+        private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());
+        private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
+        private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hola amigos vamos a empezar a trabajar con las tablas");
@@ -21,22 +21,25 @@ namespace MascotaFeliz.App.Consola
             //ListarDuenosFiltro();      
             //AddDueno();
            // BuscarDueno(7);
+           AsignarDueno();
 
            //ListarVeterinariosFiltro();
-           AddVeterinario();
+           //AddVeterinario();
             //BuscarVeterinario(3);
+            AsignarVeterinario();
 
             //ListarHistoriasFiltro();
             //AddHistoria();
             //BuscarHistoria(5);  
 
             //ListarMascotasFiltro();
-            //AddMascota();
+            AddMascota();
            //BuscarMascota(1);
 
             //ListarHistoriasFiltro();
             //AddHistoria();
-            //BuscarHistoria(2);           
+            //BuscarHistoria(2);
+            AsignarHistoria();           
             
             //ListarVisitasPyPFiltro();
             //AddVisitaPyP();
@@ -44,7 +47,7 @@ namespace MascotaFeliz.App.Consola
 
         }
 
-        /*private static void AddDueno()
+        private static void AddDueno()
         {
             var dueno = new Dueno
             {
@@ -55,7 +58,7 @@ namespace MascotaFeliz.App.Consola
                 Correo = "josemartinez@gmail.com"
             };
             _repoDueno.AddDueno(dueno);
-        }*/
+        }
 
         private static void AddVeterinario()
         {
@@ -71,51 +74,49 @@ namespace MascotaFeliz.App.Consola
         }
          
          
-       /*private static void AddMascota()
+       private static void AddMascota()
         {
             var mascota = new Mascota
             {
-                Nombre = "Lucas",
-                Color = "Cafe", 
+                Nombre = "Lula",
+                Color = "Blanco", 
                 Especie = "Canino",
-                Raza = "Pastor Aleman",
-                //Historia = 002,
-                //Dueño = "Leonardo",
-                //Veterinario = "La Chilindrina"
+                Raza = "Golden",
+
             };
             _repoMascota.AddMascota(mascota);
-        }*/
+        }
        
-        /*private static void AddVisitaPyP()
+        private static void AddVisitaPyP()
         {
             var visitaPyP = new VisitaPyP
             {
-                Temperatura = 17,
-                Peso = 14,
-                FrecuenciaRespiratoria = 120, 
-                FrecuenciaCardiaca = 80,
-                EstadoAnimo = "buena"
+                Temperatura = 26,
+                Peso = 17,
+                FrecuenciaRespiratoria = 100, 
+                FrecuenciaCardiaca = 90,
+                EstadoAnimo = "Alerta"
                 
             };
             _repoVisitaPyP.AddVisitaPyP(visitaPyP);
-        }*/
+        }
 
-       /* private static void AddHistoria()
+       private static void AddHistoria()
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(2022, 09, 10)
+                FechaInicial = new DateTime(2022, 08, 25)
                 
             };
             _repoHistoria.AddHistoria(historia);
-        }*/
+        }
 
 
-        /*private static void BuscarDueno(int IdDueno)
+        private static void BuscarDueno(int IdDueno)
           {
             var dueno = _repoDueno.GetDueno(IdDueno);
             Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos+" "+dueno.Direccion+" "+dueno.Telefono+" "+dueno.Correo);
-        }*/
+        }
 
         private static void BuscarVeterinario(int IdVeterinario)
         {
@@ -123,27 +124,27 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos+" "+veterinario.Direccion+" "+veterinario.Telefono+" "+veterinario.TarjetaProfesional);
         }
 
-       /*private static void BuscarMascota(int IdMascota)
+       private static void BuscarMascota(int IdMascota)
         {
             var mascota = _repoMascota.GetMascota(IdMascota);
             Console.WriteLine(mascota.Nombre + " " + mascota.Color+" "+mascota.Especie+" "+mascota.Raza);
-        }*/
+        }
 
-         /*private static void BuscarHistoria(int idHistoria)
+        private static void BuscarHistoria(int idHistoria)
           {
             var historia = _repoHistoria.GetHistoria(idHistoria);
             Console.WriteLine(historia.Id + " " + historia.FechaInicial);
-        }*/
+        }
         
-        /*private static void BuscarVisitaPyP(int IdVisitaPyP)
+        private static void BuscarVisitaPyP(int IdVisitaPyP)
         {
             var visitaPyP = _repoVisitaPyP.GetVisitaPyP(IdVisitaPyP);
             Console.WriteLine(visitaPyP.Temperatura + " " + visitaPyP.Peso +" "+ visitaPyP.FrecuenciaRespiratoria+" "+visitaPyP.FrecuenciaCardiaca+" "+visitaPyP.EstadoAnimo);
-        }*/
+        }
 
 
 
-        /*private static void ListarDuenosFiltro()
+        private static void ListarDuenosFiltro()
         {
             var duenosM = _repoDueno.GetAllDuenos();
             foreach (Dueno p in duenosM)
@@ -151,7 +152,7 @@ namespace MascotaFeliz.App.Consola
                 Console.WriteLine(p.Nombres + " " + p.Apellidos);
             }
 
-        }*/
+        }
 
         private static void ListarVeterinariosFiltro()
         {
@@ -163,7 +164,7 @@ namespace MascotaFeliz.App.Consola
 
         }
 
-        /*private static void ListarMascotasFiltro()
+        private static void ListarMascotasFiltro()
         {
             var mascotasM = _repoMascota.GetAllMascotas();
             foreach (Mascota p in mascotasM)
@@ -171,9 +172,9 @@ namespace MascotaFeliz.App.Consola
                 Console.WriteLine(p.Nombre + " " + p.Color+" "+p.Especie+" "+p.Raza);
             }
 
-        }*/
+        }
 
-        /*private static void ListarHistoriasFiltro()
+        private static void ListarHistoriasFiltro()
          {
             var historiasM = _repoHistoria.GetAllHistorias();
             foreach (Historia p in historiasM)
@@ -181,16 +182,39 @@ namespace MascotaFeliz.App.Consola
                 Console.WriteLine(p.Id + " " + p.FechaInicial);
             }
 
-        }*/
+        }
 
-        /*private static void ListarVisitasPyPFiltro()
+        private static void ListarVisitasPyPFiltro()
         {
             var visitaPyPM = _repoVisitaPyP.GetAllVisitaPyP();
             foreach (VisitaPyP p in visitaPyPM)
             {
                 Console.WriteLine(p.Temperatura + " " + p.Peso);
             }
-        }*/
+        }
+
+        private static void AsignarVeterinario()
+        {
+            var veterinario = _repoMascota.AsignarVeterinario(2, 2);
+            
+                Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+            }
+
+
+             private static void AsignarDueno()
+        {
+            var dueno = _repoMascota.AsignarDueno(1, 1);
+            
+                Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
+            }
+            
+            
+           private static void AsignarHistoria()
+        {
+            var historia = _repoMascota.AsignarHistoria(1, 1);
+            
+                Console.WriteLine(historia.Id + " " + historia.FechaInicial);
+            }
     }
     }
 

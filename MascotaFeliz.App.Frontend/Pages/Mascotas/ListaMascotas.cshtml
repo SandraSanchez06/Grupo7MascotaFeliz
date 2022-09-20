@@ -18,7 +18,87 @@
                 Detalle Mascota
                 </a>
             </td>
+			<td>
+                <a class="btn btn-primary table-btn" asp-page="./EditarMascotas" asp-route-duenoId="@mascota.Id">
+                    Editar Mascota
+                </a>
+            </td>   
             
         </tr>
     }
 </table>
+
+<a class = "btn btn-primary table-btn" asp-page="./EditarMascotas" class="btn-default">Registrar Mascota</a>
+
+<style>
+  
+#menu ul{
+	list-style:none;
+}
+
+#menu #item{
+	float: right;
+}
+
+#menu #item a {
+	padding: 5px 15px;
+	display: block;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	font-family: 'Bungee';
+}
+
+header{
+	background-color: #6a10f3eb;
+	text-align: center;
+	padding: 25px;
+}
+
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: #01010a;
+	margin: 0px 5px;
+	padding: 1px 5px;
+	border-radius: 35px;
+	text-align: center;
+}
+nav a:hover {
+	background-color: rgb(64, 173, 227);
+	color: rgb(245, 244, 248);
+}
+.encabezado-img{
+	background-image: url(img/fondo.webp);
+	background-size: cover;
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: rgba(1, 42, 42, 0.873);
+}
+.encabezado-img p{
+
+	font-family: cursive;
+	font-size: 40px;
+	color:rgb(244, 247, 248)
+
+
+}
+.encabezado-img h1{
+	font-size: 80px;
+	padding: 15px 0;
+	
+
+
+}
+
+</style>

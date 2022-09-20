@@ -84,7 +84,7 @@ namespace MascotaFeliz.App.Persistencia
             }
             return mascotaEncontrado;
         }  
-       /* public Veterinario AsignarVeterinario(int idMascota, int idVeterinario)
+        public Veterinario AsignarVeterinario(int idMascota, int idVeterinario)
         {
             var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m =>m.Id == idMascota);
             if (mascotaEncontrado != null)
@@ -101,10 +101,10 @@ namespace MascotaFeliz.App.Persistencia
         }
         public Dueno AsignarDueno(int idMascota, int idDueno)
         {
-            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m =>m.id == idMascota);
+            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m =>m.Id == idMascota);
             if (mascotaEncontrado != null)
             {
-             var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d =>d.id == idDueno);
+             var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d =>d.Id == idDueno);
             if (duenoEncontrado != null)
         {
          mascotaEncontrado.Dueno = duenoEncontrado;
@@ -116,10 +116,10 @@ namespace MascotaFeliz.App.Persistencia
     }
         public Historia AsignarHistoria(int idMascota, int idHistoria)
         {
-            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m =>m.id == idMascota);
+            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m =>m.Id == idMascota);
             if (mascotaEncontrado != null)
             {
-             var historiaEncontrado = _appContext.Historias.FirstOrDefault(h =>h.id == idHistoria);
+             var historiaEncontrado = _appContext.Historias.FirstOrDefault(h =>h.Id == idHistoria);
             if (historiaEncontrado != null)
         {
          mascotaEncontrado.Historia = historiaEncontrado;
@@ -128,7 +128,8 @@ namespace MascotaFeliz.App.Persistencia
             return historiaEncontrado;
         }
             return null;   
-    }*/
+    }
+    
 
  }
 
